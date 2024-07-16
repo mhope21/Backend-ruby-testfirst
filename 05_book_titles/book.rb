@@ -1,13 +1,15 @@
 class Book
 # write your code here
-  attr_accessor :title
+  attr_reader :title
 
-  def initialize(title = nil)
-   self.title = title unless title.nil?
+  def initialize(title = "")
+   @title = title
   end
-  def title=(name)
-    @title = titleize(name)
+
+  def title=(new_title)
+    @title = titleize(new_title)
   end
+  
 
   # method takes a string, iterates over each word, if there is only 1, it capitalizes first letter
   # if more than 1, it capitalizes the first letter of each word, excluding little words 
@@ -28,6 +30,6 @@ class Book
   
 end
 
-# book = Book.new
-# book.book_name("inferno")
+# book = Book.new("inferno")
+
 # puts book.title
