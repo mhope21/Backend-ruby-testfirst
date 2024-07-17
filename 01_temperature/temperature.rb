@@ -1,10 +1,6 @@
 #write your code here
 # converts temps from f to c
 def ftoc(temp)
-  return 0 if temp == 32
-  return 100 if temp == 212
-  return 37 if temp == 98.6
-  return 20 if temp == 68
   (temp - 32) * 5.0 / 9.0
 end
 
